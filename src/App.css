@@ -71,12 +71,12 @@ a {
 	width: 100%;
 	max-width: 25rem;
 	position: relative;
-	margin-bottom: 3em;
+	margin-bottom: 3rem;
 	float: left;
 }
 .generated {
 	width: 50%;
-	margin-bottom: 3em;
+	margin-bottom: 3rem;
 	margin-left: auto;
 }
 .main__title {
@@ -84,8 +84,8 @@ a {
 	font-weight: 1000;
 	text-rendering: optimizeLegibility;
 	line-height: 1.1;
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
+	margin-top: 0.75em;
+	margin-bottom: 0.75em;
 	font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
 		'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
 		'Helvetica Neue', sans-serif;
@@ -93,13 +93,13 @@ a {
 .header__title,
 .footer {
 	font-weight: 400;
-	font-size: 0.8rem;
+	font-size: 0.65rem;
 	line-height: 1.5;
 }
 .header__title,
 .footer__note {
-	margin-top: 1.5em;
-	margin-bottom: 1.5em;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -113,7 +113,7 @@ a {
 		float: none;
 	}
 	.generated {
-		margin-bottom: 3em;
+		margin-bottom: 3rem;
 		margin-left: 0;
 		width: 100%;
 	}
@@ -146,4 +146,9 @@ svg {
 
 .footer__note {
 	text-align: right;
+}
+
+.header__title {
+	text-transform: uppercase;
+	letter-spacing: 2px;
 }
