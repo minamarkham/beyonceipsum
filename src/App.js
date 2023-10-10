@@ -4,6 +4,7 @@ import {
 	ConfigProvider,
 	Button,
 	Checkbox,
+	Dropdown,
 	Form,
 	Radio,
 	Slider,
@@ -14,7 +15,6 @@ import {
 	generateLoremIpsum,
 	getRandomLyricFromRandomAlbum,
 } from './redux/ipsum';
-import lyrics from './data/lyrics';
 import './App.css';
 
 const albumOptions = [
@@ -32,6 +32,17 @@ const albumOptions = [
 const defaultAlbumOptions = albumOptions.map((album) => album.value);
 
 let title = 'To the left, to the left!';
+
+const items = [
+	{
+		label: 'With Markup',
+		key: 'markup',
+	},
+	{
+		label: 'Plain Text',
+		key: 'plainText',
+	},
+];
 
 const App = () => {
 	const [paragraphs, setParagraphs] = useState(3);
@@ -54,9 +65,20 @@ const App = () => {
 	// State to track whether the text has been copied to clipboard
 	const [copied, setCopied] = useState(false);
 
+	const stripParagraphMarkers = (text) => {
+		// Remove opening and closing <p> tags
+		const strippedText = text.replace(/<\/?p>/g, '');
+		return strippedText;
+	};
+
 	// Function to handle copying text to clipboard using Clipboard API
-	const handleCopyToClipboard = () => {
-		const textToCopy = loremIpsumText;
+	const handleCopyToClipboard = (plainText) => {
+		let textToCopy = loremIpsumText;
+
+		// Strip paragraph markers from the text
+		if (plainText) {
+			textToCopy = stripParagraphMarkers(textToCopy);
+		}
 
 		if (navigator.clipboard) {
 			// Use the Clipboard API if available
@@ -81,16 +103,16 @@ const App = () => {
 	};
 
 	const handleGenerateIpsum = () => {
-		title = getRandomLyricFromRandomAlbum(lyrics);
+		title = getRandomLyricFromRandomAlbum();
 
 		dispatch(
 			generateLoremIpsum({
 				paragraphs,
 				paragraphLength,
+				selectedAlbums,
 				includeSlay,
 				includeExplicit,
 				includeGreeting,
-				selectedAlbums,
 			}),
 		);
 	};
@@ -105,6 +127,10 @@ const App = () => {
 		setCheckAll(values.length === defaultAlbumOptions.length);
 	};
 
+	const onDropdownClick = ({ key }) => {
+		handleCopyToClipboard(key === 'plainText');
+	};
+
 	useEffect(() => {
 		document.title = 'Beyoncé Ipsum';
 		// Generate Lorem Ipsum text on component load
@@ -112,9 +138,9 @@ const App = () => {
 			generateLoremIpsum({
 				paragraphs,
 				paragraphLength,
+				selectedAlbums,
 				includeSlay,
 				includeExplicit,
-				selectedAlbums,
 			}),
 		);
 		// eslint-disable-next-line react-hooks/exhaustive-deps
@@ -125,32 +151,31 @@ const App = () => {
 			theme={{
 				algorithm: theme.darkAlgorithm,
 				token: {
-					colorPrimary: 'white', //'deeppink',
+					colorPrimary: 'white',
 					borderRadius: 0,
-					fontFamily: 'DM Mono',
+					fontFamily:
+						'"DM Mono", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
 					fontSize: 16,
 					colorText: 'white',
 				},
 				components: {
 					Button: {
 						algorithm: true,
-						// colorPrimary: 'black',
 					},
 					Slider: {
 						trackBg: 'white',
 						trackHoverBg: 'white',
-						handleColor: 'white', //'deeppink',
-						handleActiveColor: 'white', //'deeppink',
-						colorBgElevated: 'white', //'deeppink',
+						handleColor: 'white',
+						handleActiveColor: 'white',
+						colorBgElevated: 'white',
 					},
 					Radio: {
-						buttonCheckedBg: 'white', //'deeppink',
+						buttonCheckedBg: 'white',
 						buttonSolidCheckedColor: 'black',
 					},
 					Checkbox: {
 						algorithm: true,
 						colorPrimary: 'black',
-						// colorBorder: 'white',
 					},
 				},
 			}}
@@ -166,11 +191,11 @@ const App = () => {
 							className="form"
 							layout="vertical"
 							autoComplete="off"
+							initialValues={{
+								paragraphLength: 'medium',
+							}}
 						>
-							<Form.Item
-								name="radio-button"
-								label="# of Paragraphs"
-							>
+							<Form.Item name="slider" label="# of Paragraphs">
 								<div className="slider__label">
 									<Slider
 										min={1}
@@ -183,7 +208,7 @@ const App = () => {
 								</div>
 							</Form.Item>
 							<Form.Item
-								name="radio-button"
+								name="paragraphLength"
 								label="Paragraph Length"
 							>
 								<Radio.Group
@@ -191,7 +216,6 @@ const App = () => {
 										setParagraphLength(e.target.value)
 									}
 									value={paragraphLength}
-									defaultValue="medium"
 									buttonStyle="solid"
 								>
 									<Radio.Button value="short">
@@ -205,10 +229,7 @@ const App = () => {
 									</Radio.Button>
 								</Radio.Group>
 							</Form.Item>
-							<Form.Item
-								name="checkbox-group"
-								label="Which Albums?"
-							>
+							<Form.Item label="Which Albums?">
 								<Checkbox.Group
 									options={albumOptions}
 									value={selectedAlbums}
@@ -267,23 +288,22 @@ const App = () => {
 								}}
 							/>
 							<div className="copy">
-								<Button
-									type="primary"
-									ghost
-									onClick={handleCopyToClipboard}
+								<Dropdown
+									menu={{ items, onClick: onDropdownClick }}
 								>
-									Copy
-									<svg
-										fill="white"
-										version="1.1"
-										xmlns="http://www.w3.org/2000/svg"
-										x="0px"
-										y="0px"
-										viewBox="0 0 368.008 368.008"
-										width={16}
-									>
-										<path
-											d="M368,88.004c0-1.032-0.224-2.04-0.6-2.976c-0.152-0.376-0.416-0.664-0.624-1.016c-0.272-0.456-0.472-0.952-0.832-1.352
+									<Button type="primary" ghost>
+										Copy
+										<svg
+											fill="white"
+											version="1.1"
+											xmlns="http://www.w3.org/2000/svg"
+											x="0px"
+											y="0px"
+											viewBox="0 0 368.008 368.008"
+											width={16}
+										>
+											<path
+												d="M368,88.004c0-1.032-0.224-2.04-0.6-2.976c-0.152-0.376-0.416-0.664-0.624-1.016c-0.272-0.456-0.472-0.952-0.832-1.352
 										l-72.008-80c-1.512-1.688-3.672-2.656-5.944-2.656h-15.648c-0.232,0-0.472,0-0.704,0H151.992c-13.232,0-24,10.768-24,24v40H24
 										c-13.232,0-24,10.768-24,24v256c0,13.232,10.768,24,24,24h192c13.232,0,24-10.768,24-24v-40h104c13.232,0,24-10.768,24-24v-175.96
 										c0-0.016,0.008-0.024,0.008-0.04L368,88.004z M224,344.004c0,4.408-3.592,8-8,8H24c-4.408,0-8-3.592-8-8v-256c0-4.408,3.592-8,8-8
@@ -292,9 +312,10 @@ const App = () => {
 										c0-0.016-0.024-0.016-0.016-0.016c0,0-0.008-0.008-0.008-0.016c-0.008,0-0.016-0.008-0.016-0.016
 										c-0.032-0.032-0.072-0.072-0.112-0.112l-80-80c-1.504-1.504-3.544-2.352-5.664-2.352h-8.008v-40c0-4.408,3.592-8,8-8h112v88
 										c0,4.416,3.584,8,8,8H352V280.004z M352,96.004h-72.008v-80h4.44L352,91.076V96.004z"
-										></path>
-									</svg>
-								</Button>
+											></path>
+										</svg>
+									</Button>
+								</Dropdown>
 								{copied && (
 									<span className="copied">
 										Copied to clipboard!

@@ -7,7 +7,13 @@ const initialState = {
 	includeGreeting: false,
 };
 
-const slayArray = ["'Cause I slay", 'I slay', "We gon' slay", 'We slay'];
+const slayArray = [
+	'Slay',
+	"'Cause I slay",
+	'I slay',
+	"We gon' slay",
+	'We slay',
+];
 
 export const generateLoremIpsum =
 	({
@@ -19,28 +25,62 @@ export const generateLoremIpsum =
 		selectedAlbums,
 	}) =>
 	(dispatch) => {
-		// Generate the Lorem Ipsum text based on the selected options
 		let ipsumText = '';
 		let isFirstParagraph = true;
+		const numSentences =
+			paragraphLength === 'short'
+				? 3
+				: paragraphLength === 'medium'
+				? 5
+				: 7;
 
 		for (let i = 0; i < paragraphs; i++) {
-			const album = getRandomAlbum(selectedAlbums);
-			const lyricsArray = includeExplicit
-				? [...album.explicit, ...album.clean]
-				: album.clean;
-			const paragraph = generateParagraph(
-				lyricsArray,
-				paragraphLength,
-				includeSlay,
-				includeGreeting,
-				isFirstParagraph,
-			);
+			let paragraph = '';
+
+			// Add the greeting to the first paragraph
+			if (isFirstParagraph && includeGreeting) {
+				paragraph += 'Hey, Ms. Carter! ';
+			}
+
+			for (let j = 0; j < numSentences; j++) {
+				const album = getRandomAlbum(selectedAlbums);
+				const lyricsArray = includeExplicit
+					? [...album.explicit, ...album.clean]
+					: album.clean;
+				const sentence = generateSentence(
+					lyricsArray,
+					includeSlay,
+					includeGreeting && isFirstParagraph,
+				);
+				paragraph += sentence + ' ';
+			}
+
+			// Add paragraph markup
+			paragraph = `<p>${paragraph.trim()}</p>`;
 			isFirstParagraph = false;
 			ipsumText += paragraph + '\n\n';
 		}
 
 		dispatch(setLoremIpsum(ipsumText));
 	};
+
+// Modify the generateSentence function to generate a single sentence
+const generateSentence = (lyricsArray, includeSlay) => {
+	const sentenceParts = [];
+	const randomIndex = Math.floor(Math.random() * lyricsArray.length);
+	const sentence = lyricsArray[randomIndex] + '.';
+
+	sentenceParts.push(sentence);
+
+	// Add a "slay" phrase at the end of the sentence if includeSlay is true
+	if (includeSlay && Math.random() < 0.5) {
+		const randomSlayIndex = getRandomSlayIndex();
+		const slayPhrase = slayArray[randomSlayIndex] + '.';
+		sentenceParts.push(slayPhrase);
+	}
+
+	return sentenceParts.join(' ');
+};
 
 const getRandomAlbum = (selectedAlbums) => {
 	const availableAlbums =
@@ -53,42 +93,6 @@ const getRandomAlbum = (selectedAlbums) => {
 
 const getRandomSlayIndex = () => {
 	return Math.floor(Math.random() * slayArray.length);
-};
-
-const generateParagraph = (
-	lyricsArray,
-	paragraphLength,
-	includeSlay,
-	includeGreeting,
-	isFirstParagraph,
-) => {
-	const sentences = [];
-	const numSentences =
-		paragraphLength === 'short' ? 3 : paragraphLength === 'medium' ? 5 : 7;
-	const paragraphMarkup = '<p>'; // Add desired paragraph markup
-
-	// Add the greeting to the first paragraph
-	if (isFirstParagraph && includeGreeting) {
-		sentences.push('Hey, Ms. Carter!');
-	}
-
-	if (lyricsArray && lyricsArray.length > 0) {
-		for (let i = 0; i < numSentences; i++) {
-			const randomIndex = Math.floor(Math.random() * lyricsArray.length);
-			const sentence = lyricsArray[randomIndex] + '.';
-			sentences.push(sentence);
-
-			// Add a "slay" phrase at the end of the sentence if includeSlay is true
-			if (includeSlay && Math.random() < 0.5) {
-				const randomSlayIndex = getRandomSlayIndex();
-				const slayPhrase = slayArray[randomSlayIndex] + '.';
-				sentences.push(slayPhrase);
-			}
-		}
-	}
-
-	const paragraph = paragraphMarkup + sentences.join(' ') + '</p>'; // Wrap the sentences in paragraph markup
-	return paragraph;
 };
 
 const loremIpsumSlice = createSlice({
@@ -106,9 +110,9 @@ const loremIpsumSlice = createSlice({
 
 export const { setLoremIpsum, clearLoremIpsum } = loremIpsumSlice.actions;
 
-export const getRandomLyricFromRandomAlbum = (beyonceLyrics) => {
+export const getRandomLyricFromRandomAlbum = () => {
 	// Extract album names from the keys of beyonceLyrics
-	const albumNames = Object.keys(beyonceLyrics);
+	const albumNames = Object.keys(lyrics);
 
 	// Check if there are albums available
 	if (albumNames.length > 0) {
@@ -117,7 +121,7 @@ export const getRandomLyricFromRandomAlbum = (beyonceLyrics) => {
 			albumNames[Math.floor(Math.random() * albumNames.length)];
 
 		// Retrieve the selected album object
-		const selectedAlbum = beyonceLyrics[randomAlbumName];
+		const selectedAlbum = lyrics[randomAlbumName];
 
 		// Check if the selected album has clean lyrics
 		if (

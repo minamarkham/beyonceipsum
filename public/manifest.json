@@ -1,6 +1,11 @@
 {
+	"name": "Beyoncé Ipsum",
 	"short_name": "Beyoncé Ipsum",
-	"name": "A lorem ipsum generator fit for a Queen",
+	"description": "A lorem ipsum generator fit for a Queen",
+	"start_url": "/",
+	"display": "standalone",
+	"background_color": "#000000",
+	"theme_color": "#ffffff",
 	"icons": [
 		{
 			"src": "favicon.ico",
@@ -17,9 +22,5 @@
 			"type": "image/png",
 			"sizes": "512x512"
 		}
-	],
-	"start_url": ".",
-	"display": "standalone",
-	"theme_color": "#ffffff",
-	"background_color": "#000000"
+	]
 }

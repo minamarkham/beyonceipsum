@@ -1,9 +1,6 @@
 module.exports = {
 	clean: [
-		"Hold up, they don't love you like I love you",
-		"Slow down, they don't love you like I love you",
-		"Back up, they don't love you like I love you",
-		"Step down, they don't love you like I love you",
+		"They don't love you like I love you",
 		"Can't you see there's no other man above you?",
 		'What a wicked way to treat the girl that loves you',
 		"I smell your secrets, and I'm not too perfect",
@@ -11,7 +8,6 @@ module.exports = {
 		"What's worse, lookin' jealous or crazy?",
 		'Or like being walked all over lately',
 		"I'd rather be crazy",
-		"Sorry, I ain't sorry",
 		"I ain't sorry",
 		"He trying to roll me up, I ain't picking up",
 		'Headed to the club',
@@ -19,7 +15,6 @@ module.exports = {
 		"Me and my ladies sip my D'USSÉ cup",
 		'Middle fingers up, put them hands high',
 		'Wave it in his face, tell him, boy, bye',
-		'Tell him, boy, bye, boy, bye, middle fingers up',
 		"Now you want to say you're sorry",
 		'Now you want to call me crying',
 		'Now you gotta see me wilding',
