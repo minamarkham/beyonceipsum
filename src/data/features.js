@@ -33,6 +33,13 @@ module.exports = {
 		"Please don't get me hype, write my name in ice",
 		"I'm a boss, I'm a leader, I pull up in my two-seater",
 		"Shinin', shinin', shinin', shinin', yeah",
+		"We gon' take it to the moon, take it to the stars",
+		"I'm supercharged",
+		"We 'bout to take this whole thing to Mars (Lift off)",
+		"Now we gon' take it to the moon, take it to the stars",
+		"So many scars",
+		"We 'bout to take this whole thing to Mars",
+		"Take it to the stars"
 	],
 	explicit: [
 		"Can't argue with these lazy bitches, I just raise my price",
