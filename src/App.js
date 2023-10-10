@@ -24,7 +24,7 @@ const albumOptions = [
 	{ label: '4', value: 'four' },
 	{ label: 'Beyoncé', value: 'beyonce' },
 	{ label: 'Lemonade', value: 'lemonade' },
-	{ label: 'EVERYTHING IS LOVE', value: 'everythingIsLove' },
+	{ label: 'Everything Is Love', value: 'everythingIsLove' },
 	{ label: 'The Gift', value: 'theGift' },
 	{ label: 'Renaissance', value: 'renaissance' },
 	{ label: 'Features', value: 'features' },
