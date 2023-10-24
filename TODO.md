@@ -1,6 +1,8 @@
 # TODO
 
-## Dangerously in Love
+## Songs to Add
+
+### Dangerously in Love
 
 - [ ] Baby Boy
 - [ ] Be with You
@@ -17,9 +19,10 @@
 - [ ] That's How You Like It
 - [ ] Yes
 
-## B'Day
+### B'Day
 
 - [ ] Beautiful Liar
+- [ ] Check on It
 - [ ] Déjà Vu
 - [ ] Flaws and All
 - [ ] Freakum Dress
@@ -32,7 +35,7 @@
 - [ ] Suga Mama
 - [ ] Upgrade U
 
-## I Am... Sasha Fierce
+### I Am... Sasha Fierce
 
 - [ ] Ave María
 - [ ] Broken-Hearted Girl
@@ -48,7 +51,7 @@
 - [ ] Sweet Dreams
 - [ ] Video Phone
 
-## 4
+### 4
 
 - [ ] 1+1
 - [ ] Best Thing I Never Had
@@ -65,7 +68,7 @@
 - [ ] Schoolin' Life
 - [ ] Start Over
 
-## Beyoncé
+### Beyoncé
 
 - [ ] Blow
 - [ ] Blue
@@ -86,7 +89,7 @@
 - [ ] Flawless (Remix)
 - [ ] Ring Off
 
-## Lemonade
+### Lemonade
 
 - [ ] 6 Inch
 - [ ] All Night
@@ -101,7 +104,7 @@
 - [ ] Sandcastles
 - [x] ~~Sorry~~
 
-## Everything Is Love
+### Everything Is Love
 - [ ] 713
 - [x] ~~Apeshit~~
 - [ ] Black Effect
@@ -112,7 +115,7 @@
 - [x] ~~Nice~~
 - [ ] Summer
 
-## The Lion King: The Gift
+### The Lion King: The Gift
 
 - [ ] Already
 - [ ] Bigger
@@ -126,7 +129,7 @@
 - [ ] Water
 - [ ] Spirit
 
-## Renaissance
+### Renaissance
 
 - [ ] Alien Superstar
 - [ ] All Up In Your Mind
@@ -145,17 +148,25 @@
 - [ ] Thique
 - [ ] Virgo's Groove
 
-## Features
+### Features
 
 - [ ] '03 Bonnie & Clyde [The Blueprint 2: The Gift & The Curse]
+- [ ] Delresto (Echoes) [Utopia]
 - [ ] Family Feud [4:44]
 - [x] ~~Feeling Myself [The Pinkprint]~~
+- [ ] Hollywood [Kingdom Come]
 - [x] ~~Lift Off [Watch the Throne]~~
+- [ ] Love in This Club, Part II [Here I Stand]
 - [x] ~~Mi Gente~~
 - [ ] Part II (On the Run) [Magna Carta Holy Grail]
 - [x] ~~Savage (Remix) [Good News]~~
+- [ ] Shining [Grateful]
 - [ ] Telephone [The Fame Monster]
+- [ ] Turnt [IV Play]
+- [ ] Until the End of Time [FutureSex/LoveSounds]
 - [ ] Venus vs. Mars [The Blueprint 3]
 
-## Soundtracks
+### Soundtracks
+- [ ] Be Alive [King Richard]
 - [x] ~~Listen [Dreamgirls]~~
+- [ ] Work It Out [Austin Powers in: Goldmember]
