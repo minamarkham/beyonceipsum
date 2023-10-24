@@ -54,17 +54,19 @@ a {
 	color: inherit;
 }
 
-.container {
+.main {
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	padding-left: 3.75%;
 	padding-right: 3.75%;
 	max-width: 1240px;
+	zoom: 1;
 }
 
-.main {
-	zoom: 1;
+.header,
+.footer {
+	padding: 0 3rem;
 }
 
 .form {
@@ -116,6 +118,10 @@ a {
 		margin-bottom: 3rem;
 		margin-left: 0;
 		width: 100%;
+	}
+	.header,
+	.footer {
+		padding: 0 3.75%;
 	}
 }
 
