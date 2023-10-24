@@ -2,8 +2,8 @@
 
 ## Songs to Add
 
-### Dangerously in Love
-
+<details>
+ <summary>Dangerously in Love</summary>
 - [ ] Baby Boy
 - [ ] Be with You
 - [ ] The Closer I Get to You
@@ -18,9 +18,10 @@
 - [ ] Speechless
 - [ ] That's How You Like It
 - [ ] Yes
+</details>
 
-### B'Day
-
+<details>
+ <summary>B'Day</summary>
 - [ ] Beautiful Liar
 - [ ] Check on It
 - [ ] Déjà Vu
@@ -34,9 +35,10 @@
 - [ ] Ring the Alarm
 - [ ] Suga Mama
 - [ ] Upgrade U
+</details>
 
-### I Am... Sasha Fierce
-
+<details>
+ <summary>I Am... Sasha Fierce</summary>
 - [ ] Ave María
 - [ ] Broken-Hearted Girl
 - [ ] Disappear
@@ -50,9 +52,10 @@
 - [x] ~~Single Ladies (Put a Ring on It)~~
 - [ ] Sweet Dreams
 - [ ] Video Phone
+</details>
 
-### 4
-
+<details>
+ <summary>4</summary>
 - [ ] 1+1
 - [ ] Best Thing I Never Had
 - [ ] Countdown
@@ -67,9 +70,10 @@
 - [ ] Run the World (Girls)
 - [ ] Schoolin' Life
 - [ ] Start Over
+</details>
 
-### Beyoncé
-
+<details>
+ <summary>Beyoncé</summary>
 - [ ] Blow
 - [ ] Blue
 - [x] ~~Drunk in Love~~
@@ -88,9 +92,10 @@
 - [x] ~~7/11~~
 - [ ] Flawless (Remix)
 - [ ] Ring Off
+</details>
 
-### Lemonade
-
+<details>
+ <summary>Lemonade</summary>
 - [ ] 6 Inch
 - [ ] All Night
 - [ ] Daddy Lessons
@@ -103,8 +108,10 @@
 - [ ] Pray You Catch Me
 - [ ] Sandcastles
 - [x] ~~Sorry~~
+</details>
 
-### Everything Is Love
+<details>
+ <summary>Everything Is Love</summary>
 - [ ] 713
 - [x] ~~Apeshit~~
 - [ ] Black Effect
@@ -114,9 +121,10 @@
 - [ ] LoveHappy
 - [x] ~~Nice~~
 - [ ] Summer
+</details>
 
-### The Lion King: The Gift
-
+<details>
+ <summary>The Lion King: The Gift</summary>
 - [ ] Already
 - [ ] Bigger
 - [ ] Black Parade
@@ -128,9 +136,10 @@
 - [ ] Otherside
 - [ ] Water
 - [ ] Spirit
+</details>
 
-### Renaissance
-
+<details>
+ <summary>Renaissance</summary>
 - [ ] Alien Superstar
 - [ ] All Up In Your Mind
 - [ ] America Has a Problem
@@ -147,9 +156,10 @@
 - [ ] Summer
 - [ ] Thique
 - [ ] Virgo's Groove
+</details>
 
-### Features
-
+<details>
+ <summary>Features</summary>
 - [ ] '03 Bonnie & Clyde [The Blueprint 2: The Gift & The Curse]
 - [ ] Delresto (Echoes) [Utopia]
 - [ ] Family Feud [4:44]
@@ -165,8 +175,11 @@
 - [ ] Turnt [IV Play]
 - [ ] Until the End of Time [FutureSex/LoveSounds]
 - [ ] Venus vs. Mars [The Blueprint 3]
+</details>
 
-### Soundtracks
+<details>
+ <summary>Soundtracks</summary>
 - [ ] Be Alive [King Richard]
 - [x] ~~Listen [Dreamgirls]~~
 - [ ] Work It Out [Austin Powers in: Goldmember]
+</details>
