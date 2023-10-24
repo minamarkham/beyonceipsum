@@ -4,6 +4,7 @@
 
 <details>
  <summary>Dangerously in Love</summary>
+
 - [ ] Baby Boy
 - [ ] Be with You
 - [ ] The Closer I Get to You
@@ -22,6 +23,7 @@
 
 <details>
  <summary>B'Day</summary>
+
 - [ ] Beautiful Liar
 - [ ] Check on It
 - [ ] Déjà Vu
@@ -39,6 +41,7 @@
 
 <details>
  <summary>I Am... Sasha Fierce</summary>
+
 - [ ] Ave María
 - [ ] Broken-Hearted Girl
 - [ ] Disappear
@@ -56,6 +59,7 @@
 
 <details>
  <summary>4</summary>
+
 - [ ] 1+1
 - [ ] Best Thing I Never Had
 - [ ] Countdown
@@ -74,6 +78,7 @@
 
 <details>
  <summary>Beyoncé</summary>
+
 - [ ] Blow
 - [ ] Blue
 - [x] ~~Drunk in Love~~
@@ -96,6 +101,7 @@
 
 <details>
  <summary>Lemonade</summary>
+
 - [ ] 6 Inch
 - [ ] All Night
 - [ ] Daddy Lessons
@@ -112,6 +118,7 @@
 
 <details>
  <summary>Everything Is Love</summary>
+
 - [ ] 713
 - [x] ~~Apeshit~~
 - [ ] Black Effect
@@ -125,6 +132,7 @@
 
 <details>
  <summary>The Lion King: The Gift</summary>
+
 - [ ] Already
 - [ ] Bigger
 - [ ] Black Parade
@@ -140,6 +148,7 @@
 
 <details>
  <summary>Renaissance</summary>
+
 - [ ] Alien Superstar
 - [ ] All Up In Your Mind
 - [ ] America Has a Problem
@@ -160,6 +169,7 @@
 
 <details>
  <summary>Features</summary>
+
 - [ ] '03 Bonnie & Clyde [The Blueprint 2: The Gift & The Curse]
 - [ ] Delresto (Echoes) [Utopia]
 - [ ] Family Feud [4:44]
@@ -179,6 +189,7 @@
 
 <details>
  <summary>Soundtracks</summary>
+
 - [ ] Be Alive [King Richard]
 - [x] ~~Listen [Dreamgirls]~~
 - [ ] Work It Out [Austin Powers in: Goldmember]
