@@ -28,6 +28,7 @@ const albumOptions = [
 	{ label: 'The Gift', value: 'theGift' },
 	{ label: 'Renaissance', value: 'renaissance' },
 	{ label: 'Features', value: 'features' },
+	{ label: 'Soundtracks', value: 'soundtracks' },
 ];
 const defaultAlbumOptions = albumOptions.map((album) => album.value);
 

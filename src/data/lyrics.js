@@ -9,6 +9,7 @@ const everythingIsLove = require('./everythingIsLove');
 const theGift = require('./theGift');
 const renaissance = require('./renaissance');
 const features = require('./features');
+const soundtracks = require('./soundtracks');
 
 // Combine all the album objects into a single object
 const lyrics = {
@@ -22,6 +23,7 @@ const lyrics = {
 	theGift,
 	renaissance,
 	features,
+	soundtracks,
 };
 
 // Export the combined object
